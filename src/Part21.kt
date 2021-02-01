@@ -1,3 +1,4 @@
+//Kotlin Newbie to Pro - INHERITANCE - Part 21
 fun main() {
     val myCircle = Circle(5.0)
     myCircle.changeName("Peter")
