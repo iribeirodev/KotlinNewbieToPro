@@ -6,9 +6,13 @@ class Rectangle(
         println("$name created with a = $a and b = $b")
     }
 
-    fun area() = a * b
+    override fun area(): Double = a * b
 
-    fun perimeter() = 2 * a + 2 * b
+    override fun perimeter(): Double = 2 * a + 2 * b
+
+//    fun area() = a * b
+//
+//    fun perimeter() = 2 * a + 2 * b
 
     fun isSquare() = a == b
 }
