@@ -1,3 +1,5 @@
+//Kotlin Newbie to Pro - LAMBDA FUNCTIONS - Part 28
+//Kotlin Newbie to Pro - GENERICS - Part 29
 fun main() {
     Homework()
 }
@@ -42,12 +44,21 @@ fun List<Int>.customSum(evalExpression: (Int) -> Boolean): Int {
     return acc
 }
 
-fun List<Shape>.customFilter(filterFunction: (Shape) -> Boolean): List<Shape> {
-    val resultList = mutableListOf<Shape>()
-    for(shape in this) {
-        if(filterFunction(shape)) {
-            resultList.add(shape)
+//fun List<Shape>.customFilter(filterFunction: (Shape) -> Boolean): List<Shape> {
+//    val resultList = mutableListOf<Shape>()
+//    for(shape in this) {
+//        if(filterFunction(shape)) {
+//            resultList.add(shape)
+//        }
+//    }
+//    return resultList
+//}
+
+fun <T> List<T>.customFilter(filterFunction: (T) -> Boolean): List<T> {
+    val resultList = mutableListOf<T>()
+    for (item in this) {
+        if(filterFunction(item)) {
+            resultList.add(item)
         }
     }
-    return resultList
 }
